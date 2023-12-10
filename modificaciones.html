@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Reserva</title>
+    <link rel="stylesheet" href="./estilos/alta.css">
+</head>
+
+<body>
+    <h1>Modificar Paquete</h1>
+    <h3>Codo a Codo</h3>
+    <div id="app">
+        <form @submit.prevent="obtenerDestino">
+            <label for="codigo">Codigo:</label>
+            <input type="text" v-model="codigo" id="codigo" required><br>
+            <button type="submit">Modificar Reserva</button> <a href="index.html">Menu principal</a>
+        </form>
+
+        <div v-if="mostrarDatospaquete">
+            <h2>Datos de reserva</h2>
+            <form @submit.prevent="guardarCambios">
+                <label for="destinoModificar">Destino:</label>
+                <input type="text" id="destinoModificar" v-model="destino" required><br>
+
+                <label for="inicioModificar">Inicio:</label>
+                <input type="text" id="inicioModificar" v-model="inicio" required><br>
+
+                <label for="finalModificar">Final:</label>
+                <input type="text" id="finalModificar" v-model="final" required><br>
+
+                <label for="diasModificar">Dias:</label>
+                <input type="number" id="diasModificar" v-model="dias" required><br>
+
+                <!-- Imagen actual del paquete -->
+                <img v-if="imagen_url && !imagenSeleccionada" :src="'./static/imagenes/' + imagen_url"
+                    alt="Imagen del paquete" style="max-width: 200px;">
+
+                <!-- Vista previa de la nueva imagen seleccionada -->
+                <img v-if="imagenSeleccionada" :src="imagenUrlTemp" alt="Vista previa de la nueva imagen"
+                    style="max-width: 200px;">
+
+                <!-- Input para nueva imagen -->
+                <label for="nuevaImagen">Nueva Imagen:</label>
+                <input type="file" id="nuevaImagen" @change="seleccionarImagen"><br>
+
+                <label for="precioModificar">Precio:</label>
+                <input type="number" step="0.01" id="precioModificar" v-model="precio" required><br>
+
+                <button type="submit">Guardar Cambios</button>
+                <a href="modificaciones.html">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./JS/modificar.js"></script>
+
+</body>
+</html>

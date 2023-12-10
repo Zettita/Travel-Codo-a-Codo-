@@ -1,0 +1,690 @@
+/* BELEN */
+.header {
+  background-color: rgb(98, 199, 243);
+  border: 1px solid rgb(0, 3, 3);
+}
+
+p {
+  color: rgb(0, 0, 5);
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 350%;
+  margin: 0 0 15px;
+  color: rgb(0, 2, 2);
+}
+
+h2 {
+  font-size: 54px;
+  color: rgb(11, 10, 10);
+  text-align: center;
+}
+
+h3 {
+  color: #868686;
+  font-size: 20px;
+  text-align: center;
+  border: 1px;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+small {
+  color: lightgray;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  max-width: 820px;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url(https://mcusercontent.com/ec104f3d77537e1962ab6441c/images/f9167dfd-9e60-4edd-b1ec-5bd151a5e52a.jpg);
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url(https://mcusercontent.com/ec104f3d77537e1962ab6441c/images/21f25caa-a6fe-40bb-9b1f-85f59ee063dd.jpg);
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url(https://mcusercontent.com/ec104f3d77537e1962ab6441c/images/b6f2cc1d-498a-4188-83e7-aa5f030462dc.jpg);
+}
+
+.card__like {
+  width: 18px;
+}
+
+.card__time {
+  font-size: 12px;
+  color: #df3385;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.card__clock-info {
+  float: right;
+}
+
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+
+.card {
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 30px 18px -8px rgba(0, 0, 0, 0.1) !important;
+  transform: scale(1.1, 1.1) !important;
+}
+
+.card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px;
+}
+
+.card__category {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+}
+
+.card__title {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  font-size: 22px;
+  color: #444 !important;
+  line-height: 150%;
+}
+
+.card__by {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card__author {
+  font-weight: 700;
+  text-decoration: none;
+  color: #df3385;
+}
+
+.card:hover .card__img--hover {
+  height: 100% !important;
+  opacity: 0.3 !important;
+}
+
+.card:hover .card__info {
+  background-color: transparent !important;
+  position: relative !important;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1 !important;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 100% !important;
+  }
+}
+
+#grande {
+  font-size: 100px;
+  color: rgb(10, 9, 9);
+  background: #dfe0e0;
+  border: 1px;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  text-align: center;
+}
+
+/* BELEN */
+/* URIEL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  background-color: #000000;
+  z-index: 2000;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logoHeaderA {
+  width: 70px;
+  margin: 5px;
+}
+
+.logoHeader {
+  width: 70px;
+  margin: 5px;
+}
+
+.ulNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.liNav {
+  list-style: none;
+  padding: 5px;
+}
+
+.aNav {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: repeat(auto-fill, minmax(391px, 1fr));
+  max-width: 82%;
+  width: 100%;
+  margin: 0px 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+#tittleViajes {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 30px;
+
+  &::selection {
+    background-color: black;
+    color: white;
+  }
+}
+
+.cardViaje {
+  border-radius: 5px;
+  border: 1px solid #f0f0f0;
+  margin: 10px;
+  width: 380px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  border: 1px solid #dfdfdf;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0);
+  }
+
+  &:hover .precio {
+    transform: scale(1.1);
+  }
+}
+
+.aCard {
+  width: 100%;
+  position: relative;
+}
+
+.imagenDestino {
+  border-radius: 5px;
+  width: 100%;
+  max-height: 211.688px;
+}
+
+.precio {
+  position: absolute;
+  z-index: 100;
+  top: 150px;
+  background-color: #df3385;
+  color: #ffffff;
+  padding: 3px 10px;
+  transition: all 0.3s;
+}
+
+.tittleDiv {
+  margin: 5px;
+}
+
+.destino {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+
+  &::selection {
+    background-color: black;
+    color: white;
+  }
+}
+
+.fechaOferta {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+
+  &::selection {
+    background-color: black;
+    color: white;
+  }
+}
+
+.diasDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 5px;
+}
+
+.dias {
+  font-size: 12px;
+  font-weight: 600;
+
+  &::selection {
+    background-color: black;
+    color: white;
+  }
+}
+
+.removeButton {
+  max-width: 50px;
+  color: #000000;
+  background-color: #dfdfdf;
+}
+
+#cardViajeClima {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  background-color: #df3385;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px 0;
+}
+
+#climaTitulo {
+  color: rgba(250, 250, 250, 0.9);
+}
+
+#descripcionClima {
+  color: rgba(250, 250, 250, 0.9);
+}
+
+#ciudadNombre {
+  text-align: start;
+  color: #ffffff;
+}
+
+#grados {
+  color: #ffffff;
+}
+
+.sectionCardsClima {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* URIEL */
+
+/* MELANIE */
+/* Estilos para el contenedor principal */
+.standard_wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el título y subtítulo */
+.ppb_title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+  background-color: white;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+.page_tagline {
+  font-size: 18px;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+/* Estilos para las columnas de testimonios */
+.ppb_testimonial_column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Ajuste para mostrar dos cuadros por fila */
+.testimonial_column_element {
+  width: 48%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #333;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  /* Fondo blanco */
+  border: none;
+  /* Eliminar borde */
+  box-shadow: none;
+  /* Eliminar sombra */
+}
+
+/* Estilo para la imagen dentro del cuadro */
+.testimonial_column_element img {
+  max-width: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Estilos para el contenido del testimonio */
+.testimonial_content {
+  font-size: 16px;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+.testimonial_customer h6 {
+  margin: 10px 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+.testimonial_customer_position {
+  font-size: 14px;
+  color: #555;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+/* Estilo para el texto "Conocé la opinión de los viajeros que nos eligen" */
+.page_tagline {
+  color: #888;
+  /* Cambiado a un gris más claro */
+}
+
+/* MELANIE */
+
+/* VALEN */
+.footer {
+  width: 100%;
+  background-color: black;
+}
+
+.contenedorFooter {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px 0px;
+}
+
+.boxes figure {
+  width: 100%;
+  height: 100%;
+}
+
+.boxes img {
+  width: 250px;
+}
+
+.boxes {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  margin-right: 10px;
+  background-color: rgb(21, 21, 43);
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.red-social a:hover {
+  color: rgb(191, 36, 121);
+}
+
+.derechos {
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.infoP {
+  color: white;
+  font-size: 15px;
+}
+
+/* VALEN */
+/* CRISTIAN actualizado */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+.contact_form{	
+	width: 460px; 
+  height: auto;
+  margin: 80px auto;
+	border-radius: 10px;  
+	padding-top: 30px;
+	padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+input{
+	background-color: #fbfbfb; 
+	width: 408px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color:  #df3385; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+select{
+	background-color: #fbfbfb; 
+	width: 408px; 
+	height: 40px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color:  #df3385; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+textarea{
+  background-color: #fbfbfb; 
+	width: 405px; 
+	height: 150px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #df3385; 
+	margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+label{
+  display: block; 
+	float: center; 	
+}
+
+button{
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #df3385; 
+	border-color:  #df3385; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 420px;   
+  cursor: pointer;
+}
+
+button p{
+	color: #fff; 
+}
+
+span{
+	color:  #df3385; 
+}
+
+.aviso{
+	font-size: 13px;  
+	color: #0e0e0e;  
+}
+
+h1{
+	font-size: 39px;  
+	text-align: letf; 
+	padding-bottom: 20px; 
+	color: #df3385;
+}
+
+h3{
+	font-size: 16px; 
+	padding-bottom: 30px;
+	color: #868686;   
+}
+
+p{
+	font-size: 14px; 
+	color: #0e0e0e; 
+}
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+.formulario input:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+.formulario textarea:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+/* CRISTIAN actualizado */

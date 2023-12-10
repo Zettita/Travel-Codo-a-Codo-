@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codo a Codo Travel</title>
+    <link rel="shortcut icon" href="imagenes/viajar.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/estilos_general.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- URIEL -->
+    <header class="header">
+      <nav>
+        <a class="logoHeaderA" href="index.html"
+          ><img
+            class="logoHeader"
+            src="./imagenes/travelogoheader.png"
+            alt=""
+          />
+        </a>
+        <ul class="ulNav">
+          <li class="liNav"><a class="aNav" href="index.html">Inicio</a></li>
+          <li class="liNav"><a class="aNav" href="#reseñas">Reseñas</a></li>
+          <li class="liNav"><a class="aNav" href="#novedades">Novedades</a></li>
+          <li class="liNav"><a class="aNav" href="contacto.html">Contacto</a></li>
+          <li class="liNav"><a class="aNav" href="altas.html">Altas</a></li></li>
+          <li class="liNav"><a class="aNav" href="modificaciones.html">Modificar</a></li></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="sectionCardsClima">
+        <h2 id="tittleViajes">Salidas grupales de Agosto Diciembre 2023</h2>
+
+        <section class="cardsContainer" id="cardsContainer" >
+          <article class="cardViaje" v-for="destino in destinos">
+            <a href="#" class="aCard">
+              <img
+                v-bind:src="'./static/imagenes/' + destino.Imagen_url"
+                class="imagenDestino"
+                alt="Destino del viaje"
+              />
+              <p class="precio">${{destino.Precio}}</p>
+            </a>
+            <div class="tittleDiv">
+              <h4 class="destino">{{destino.Destino}}</h4>
+              <p class="fechaOferta">{{destino.Inicio_vigencia}} a {{destino.Fin_vigencia}} 2023</p>
+            </div>
+            <div class="diasDiv">
+              <button class="removeButton" @click="eliminarDestino(destino.Codigo)">🗑</button>
+              <p class="dias">⏱️{{destino.Dias}} días</p>
+            </div>
+          </article>
+          
+        </section>
+
+        <section id="climaSection">
+          <div id="cardViajeClima">
+            <h4 id="climaTitulo">Clima actual en:</h4>
+            <h3 id="ciudadNombre"></h3>
+            <h4 id="grados"></h4>
+            <p id="descripcionClima"></p>
+            <img src="" alt="icono del clima" id="iconoClima" />
+          </div>
+        </section>
+      </section>
+      <hr />
+      <!-- URIEL -->
+      <!-- MELANIE -->
+      <section id="reseñas">
+        <div
+          class="one withsmallpadding ppb_header"
+          style="
+            padding-bottom: 0px !important;
+            text-align: left;
+            padding: 60px 0 60px 0;
+          "
+        >
+          <div class="standard_wrapper">
+            <div class="page_content_wrapper">
+              <div class="inner">
+                <div style="margin: auto; width: 100%">
+                  <h2 class="ppb_title">Contanos tu experiencia!</h2>
+                  <div class="page_tagline">
+                    Conocé la opinión de los viajeros que nos eligen.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="one withsmallpadding ppb_testimonial_column">
+          <div class="standard_wrapper">
+            <div class="page_content_wrapper">
+              <div class="inner">
+                <div class="testimonial_wrapper">
+                  <!-- Pareja 1 de experiencias -->
+                  <div class="testimonial_pair">
+                    <div class="one_half testimonial_column_element animated1">
+                      <!-- Contenido de Lucre Espinosa -->
+                      <div
+                        class="testimonial_image animated"
+                        data-animation="bigEntrance"
+                      >
+                        <img
+                          class="team_pic"
+                          src="https://www.zamoranoviajes.tur.ar/wp-content/uploads/2014/06/Lucre-Espinosa-150x150.jpg"
+                          alt="Lucre Espinosa"
+                        />
+                      </div>
+                      <div class="testimonial_content">
+                        "Excelente servicio, el micro, choferes súper
+                        responsables y un gran coordinador! viajamos a Cataratas
+                        para Navidad y superó nuestras expectativas."
+                        <br />
+                        <br />
+                        <div class="testimonial_customer">
+                          <h6>Lucre Espinosa</h6>
+                          <div class="testimonial_customer_position">
+                            Pasajera frecuente
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="one_half testimonial_column_element animated2 last"
+                    >
+                      <!-- Contenido de Lucas Ezequiel Lobos -->
+                      <div
+                        class="testimonial_image animated"
+                        data-animation="bigEntrance"
+                      >
+                        <img
+                          class="team_pic"
+                          src="https://www.zamoranoviajes.tur.ar/wp-content/uploads/2014/06/lucasezequiellobos-150x150.jpg"
+                          alt="Lucas Ezequiel Lobos"
+                        />
+                      </div>
+                      <div class="testimonial_content">
+                        "Excelente servicio, conductores responsables y ni
+                        hablar de los coordinadores 10/10."
+                        <br />
+                        <br />
+                        <div class="testimonial_customer">
+                          <h6>Lucas Ezequiel Lobos</h6>
+                          <div class="testimonial_customer_position">
+                            Viajero frecuente
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pareja 2 de experiencias -->
+                  <div class="testimonial_pair">
+                    <div class="one_half testimonial_column_element animated3">
+                      <!-- Contenido de Dai Cereguetti -->
+                      <div
+                        class="testimonial_image animated"
+                        data-animation="bigEntrance"
+                      >
+                        <img
+                          class="team_pic"
+                          src="https://www.zamoranoviajes.tur.ar/wp-content/uploads/2014/06/Dai-Cereguetti-150x150.jpg"
+                          alt="Dai Cereguetti"
+                        />
+                      </div>
+                      <div class="testimonial_content">
+                        "Viajé sola por primera vez con ellos a Bariloche en
+                        Enero, tenía miedos y dudas pero fue una experiencia
+                        increíble, donde conocí y compartí con personas
+                        agradables, que me hicieron sentir muy acompañada."
+                        <br />
+                        <br />
+                        <div class="testimonial_customer">
+                          <h6>Dai Cereguetti</h6>
+                          <div class="testimonial_customer_position">
+                            Pasajero
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="one_half testimonial_column_element animated4 last"
+                    >
+                      <!-- Contenido de Carlos Samuel -->
+                      <div
+                        class="testimonial_image animated"
+                        data-animation="bigEntrance"
+                      >
+                        <img
+                          class="team_pic"
+                          src="https://www.zamoranoviajes.tur.ar/wp-content/uploads/2020/07/Carlos-Samuel-150x150.jpg"
+                          alt="Carlos Samuel"
+                        />
+                      </div>
+                      <div class="testimonial_content">
+                        "La calidad del servicio, cada uno elije el lugar de su
+                        preferencia pero no sería posible disfrutarlo si no hay
+                        un servicio de calidad detrás. Una nota aparte para la
+                        profesionalidad del coordinador."
+                        <br />
+                        <br />
+                        <div class="testimonial_customer">
+                          <h6>Carlos Samuel</h6>
+                          <div class="testimonial_customer_position">
+                            Pasajero Frecuente
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pareja 3 de experiencias -->
+                  <div class="testimonial_pair">
+                    <div class="one_half testimonial_column_element animated5">
+                      <!-- Contenido de Paula Salvo Agnone -->
+                      <div
+                        class="testimonial_image animated"
+                        data-animation="bigEntrance"
+                      >
+                        <img
+                          class="team_pic"
+                          src="https://www.zamoranoviajes.tur.ar/wp-content/uploads/2020/07/Paula-Salvo-Agnone-150x150.jpg"
+                          alt="Paula Salvo Agnone"
+                        />
+                      </div>
+                      <div class="testimonial_content">
+                        "Excelente todo! Impecable viaje! Colectivo,
+                        coordinador, choferes, hoteles, todo, sin palabras.
+                        Amables y responsables. Enseguida te sacaban dudas o
+                        inquietudes. Lo vuelvo a elegir. Gracias!"
+                        <br />
+                        <br />
+                        <div class="testimonial_customer">
+                          <h6>Paula Salvo Agnone</h6>
+                          <div class="testimonial_customer_position">
+                            Pasajero Frecuente
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="one_half testimonial_column_element animated6 last"
+                    >
+                      <!-- Contenido de Claudia Fernández -->
+                      <div
+                        class="testimonial_image animated"
+                        data-animation="bigEntrance"
+                      >
+                        <img
+                          class="team_pic"
+                          src="https://www.zamoranoviajes.tur.ar/wp-content/uploads/2020/07/Claudia-Fernandez-150x150.jpg"
+                          alt="Claudia Fernández"
+                        />
+                      </div>
+                      <div class="testimonial_content">
+                        "Excelente estado del micro, los choferes que nos
+                        tocaron muy responsables en la ruta, muy buena atención,
+                        Recomendable!"
+                        <br />
+                        <br />
+                        <div class="testimonial_customer">
+                          <h6>Claudia Fernández</h6>
+                          <div class="testimonial_customer_position">
+                            Pasajero Frecuente
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MELANIE -->
+      <hr />
+      <!-- BELEN -->
+      <section id="novedades">
+        <div class="box-1">
+          <h2>Novedades</h2>
+          <h3>
+            Mantente actualizado con las últimas novedades del turismo Nacional
+            e Internacional
+          </h3>
+          <br />
+        </div>
+        <div
+          style="display: flex; justify-content: center; box-sizing: border-box"
+        >
+          <div class="cards">
+            <div class="card card--1">
+              <div class="card__info-hover">
+                <img
+                  src="imagenes/dolares_viajes.jpg"
+                  style="width: 380px; height: 265px"
+                  alt="dolares_viajes"
+                />
+                <div class="card__clock-info">
+                  <span class="card__time">17/08/2023 &bull; 12:13</span>
+                </div>
+              </div>
+              <div class="card__img">&nbsp;</div>
+
+              <div class="card__img--hover">
+                <a class="card_link" href="#"
+                  ><em style="display: none">&nbsp;</em></a
+                >
+              </div>
+
+              <div class="card__info">
+                <span class="card__category">Turismo Internacional</span>
+                <a class="card__title" href="Novedad 1.html"
+                  >El impacto de la suba del dólar en los viajes al exterior</a
+                >
+                <span class="card__by"
+                  >by
+                  <a class="card__author" href="#" title="author"
+                    >Cadena 3</a
+                  ></span
+                >
+              </div>
+            </div>
+
+            <div class="card card--2">
+              <div class="card__info-hover">
+                <img
+                  src="imagenes/telefono.avif"
+                  style="width: 380px; height: 265px"
+                  alt="google"
+                />
+                <div class="card__clock-info">
+                  <span class="card__time">17/07/2023 &bull; 17:36</span>
+                </div>
+              </div>
+
+              <div class="card__img">&nbsp;</div>
+
+              <div class="card__img--hover">
+                <a class="card_link" href="#"
+                  ><em style="display: none">&nbsp;</em></a
+                >
+              </div>
+
+              <div class="card__info">
+                <span class="card__category">Tecno</span>
+                <a class="card__title" href="Novedad 2.html"
+                  ><br />Cómo cambiar la ubicación de Google Play Store para
+                  descargar aplicaciones en viajes</a
+                >
+                <span class="card__by"
+                  >by
+                  <a class="card__author" href="#" title="author"
+                    >Infobae</a
+                  ></span
+                >
+              </div>
+            </div>
+
+            <div class="card card--3">
+              <div class="card__info-hover">
+                <img
+                  src="imagenes/sellos.jpg"
+                  style="width: 380px; height: 265px"
+                  alt="vacaciones"
+                />
+                <div class="card__clock-info">
+                  <span class="card__time">25/01/2023 &bull; 15:39</span>
+                </div>
+              </div>
+
+              <div class="card__img">&nbsp;</div>
+
+              <div class="card__img--hover">
+                <a class="card_link" href="Novedad 3.html"
+                  ><em style="display: none">&nbsp;</em></a
+                >
+              </div>
+
+              <div class="card__info">
+                <span class="card__category">Turismo Internacional</span>
+                <a class="card__title" href="Novedad 3.html"
+                  >Vacaciones 2023: los 3 destinos turísticos internacionales
+                  más elegidos por los argentinos</a
+                >
+                <span class="card__by"
+                  >by
+                  <a class="card__author" href="#" title="author"
+                    >El Destape</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      &nbsp;
+      <div class="box-4">
+        <div align="center">
+          <img src="imagenes/plane-83_256.gif" alt="Animación GIF" />
+        </div>
+        <br>
+        <h3>Turismo Nacional e Internacional</h3>
+        <br>
+      </div>
+      <!-- BELEN -->
+    </main>
+    <!-- VALEN -->
+    <footer class="footer">
+      <div class="contenedorFooter">
+        <div class="boxes">
+          <figure>
+            <a href="#">
+              <img src="imagenes/travelogo.png" alt="Logo travel" />
+            </a>
+          </figure>
+        </div>
+        <div class="boxes">
+          <div class="info">
+            <p class="infoP">codoacodotravel@gmail.com</p>
+            <p class="infoP">0800 333 7429 / 15 3692 6718</p>
+            <p class="infoP">Guemes 515, Piso 6, CABA</p>
+            <p class="infoP">Lunes a viernes de 09 a 17 hs</p>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="red-social">
+            <a
+              href="https://www.facebook.com/TurismoNacionAR"
+              class="fa fa-facebook"
+            ></a>
+            <a
+              href="https://www.instagram.com/turismonacionar/"
+              class="fa fa-instagram"
+            ></a>
+            <a
+              href="https://twitter.com/TurismoNacionAR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              class="fa fa-twitter"
+            ></a>
+          </div>
+        </div>
+        <div class="derechos">
+          <small
+            >&copy; 2023 <b> Codo a Codo Travel</b> - Todos los Derechos
+            Reservados</small
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- VALEN -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/listar.js"></script>
+  </body>
+</html>

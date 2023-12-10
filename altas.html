@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar destino</title>
+    <link rel="stylesheet" href="./estilos/alta.css">
+</head>
+
+<body>
+    <h1>Agregar Destinos</h1>
+    <h3>Codo a Codo 2023</h3>
+
+    <!--enctype="multipart/form-data es necesario para enviar archivos al back.-->
+    <form id="formulario" enctype="multipart/form-data">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required><br>
+
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required><br>
+
+        <label for="inicio_vigencia">Mes de Inicio:</label>
+        <input type="text" id="inicio_vigencia" name="inicio_vigencia" required><br>
+
+        <label for="fin_vigencia">Mes de finalizacion:</label>
+        <input type="text" id="fin_vigencia" name="fin_vigencia" required><br>
+
+        <label for="dias">Dias:</label>
+        <input type="number" id="dias" name="dias" required><br>
+
+        <label for="imagen_url">Imagen del producto:</label>
+        <input type="file" id="imagen_url" name="imagen_url">
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio">
+        
+        <button type="submit">Agregar Producto</button>
+        <a href="index.html">Menu principal</a>
+    </form>
+
+    <script src="./JS/altas.js"></script>
+</body>
+
+</html>
