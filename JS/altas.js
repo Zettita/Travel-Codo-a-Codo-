@@ -19,10 +19,10 @@ const URL = "http://127.0.0.1:5000/"
                 body: formData // Aquí enviamos formData en lugar de JSON
             })
             .then(function (response) {
-                if (response.ok) { return response.json(); }
+                if (response.ok) { return response.json(), Swal.fire("SweetAlert2 is working!"); }
             })
             .then(function (data) {
-                alert('Producto agregado correctamente.');
+                alert("El producto ha sido cargado correctamente")
                 // Limpiar el formulario para el proximo producto
                 document.getElementById('codigo').value = "";
                 document.getElementById('destino').value = "";
@@ -34,7 +34,8 @@ const URL = "http://127.0.0.1:5000/"
             })
             .catch(function (error) {
                 // Mostramos el error, y no limpiamos el form.
-                alert('Error al agregar el producto, verifique el codigo ingresado.');
+                Swal.fire("Error al cargar destino");
             });
             
         })
+        

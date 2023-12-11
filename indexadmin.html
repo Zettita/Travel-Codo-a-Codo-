@@ -47,7 +47,8 @@
           <li class="liNav"><a class="aNav" href="#reseñas">Reseñas</a></li>
           <li class="liNav"><a class="aNav" href="#novedades">Novedades</a></li>
           <li class="liNav"><a class="aNav" href="contacto.html">Contacto</a></li>
-          <li class="liNav"><a class="aNav" href="login.html">Ingresar</a></li>
+          <li class="liNav"><a class="aNav" href="altas.html">Altas</a></li></li>
+          <li class="liNav"><a class="aNav" href="modificaciones.html">Modificar</a></li></li>
         </ul>
       </nav>
     </header>
@@ -70,6 +71,7 @@
               <p class="fechaOferta">{{destino.Inicio_vigencia}} a {{destino.Fin_vigencia}} 2023</p>
             </div>
             <div class="diasDiv">
+              <button class="removeButton" @click="eliminarDestino(destino.Codigo)">🗑</button>
               <p class="dias">⏱️{{destino.Dias}} días</p>
             </div>
           </article>
@@ -477,6 +479,7 @@
       </div>
     </footer>
     <!-- VALEN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="./JS/script.js"></script>
     <script src="./JS/listar.js"></script>
