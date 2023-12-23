@@ -60,19 +60,19 @@
           <article class="cardViaje" v-for="destino in destinos">
             <a href="#" class="aCard">
               <img
-                v-bind:src="'./static/imagenes/' + destino.Imagen_url"
+                v-bind:src="'./static/imagenes/' + destino.imagen_url"
                 class="imagenDestino"
                 alt="Destino del viaje"
               />
-              <p class="precio">${{destino.Precio}}</p>
+              <p class="precio">${{destino.precio}}</p>
             </a>
             <div class="tittleDiv">
-              <h4 class="destino">{{destino.Destino}}</h4>
-              <p class="fechaOferta">{{destino.Inicio_vigencia}} a {{destino.Fin_vigencia}} 2023</p>
+              <h4 class="destino">{{destino.destino}}</h4>
+              <p class="fechaOferta">{{destino.inicio_vigencia}} a {{destino.fin_vigencia}} 2023</p>
             </div>
             <div class="diasDiv">
-              <button class="removeButton" @click="eliminarDestino(destino.Codigo)">🗑</button>
-              <p class="dias">⏱️{{destino.Dias}} días</p>
+              <button class="removeButton" @click="eliminarDestino(destino.codigo)">🗑</button>
+              <p class="dias">⏱️{{destino.dias}} días</p>
             </div>
           </article>
           

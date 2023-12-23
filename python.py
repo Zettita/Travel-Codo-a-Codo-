@@ -81,7 +81,7 @@ class Catalogo:
         return self.cursor.fetchone()
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
-destinos = Catalogo(host='localhost', user='root', password='', database='codo_a_codo')
+destinos = Catalogo(host='Zettita.mysql.pythonanywhere-services.com', user='Zettita', password='bobesponja1', database='Zettita$codo_a_codo')
 #--------------------------------------------------------------------
 
 RUTA_DESTINO = './static/imagenes/'
@@ -126,12 +126,12 @@ def agregar_destino():
     
 @app.route("/destinos/<int:codigo>", methods=["PUT"])
 def modificar_destino(codigo):
-    nuevo_destino = request.form.get("Destino")
-    nuevo_inicio = request.form.get("Inicio_vigencia")
-    nuevo_fin = request.form.get("Fin_vigencia")
-    nuevo_dias = request.form.get("Dias")
-    nueva_imagen = request.files["Imagen_url"]
-    nuevo_precio = request.form.get("Precio")
+    nuevo_destino = request.form.get("destino")
+    nuevo_inicio = request.form.get("inicio_vigencia")
+    nuevo_fin = request.form.get("fin_vigencia")
+    nuevo_dias = request.form.get("dias")
+    nueva_imagen = request.files["imagen_url"]
+    nuevo_precio = request.form.get("precio")
 
     nombre_imagen = secure_filename(nueva_imagen.filename)
     nombre_base, extension = os.path.splitext(nombre_imagen)
@@ -140,7 +140,7 @@ def modificar_destino(codigo):
 
     destino = destinos.consultar_destino(codigo)
     if destino:
-        imagen_vieja = destino["Imagen_url"]
+        imagen_vieja = destino["imagen_url"]
         # Armo la ruta a la imagen
         ruta_imagen = os.path.join(RUTA_DESTINO, imagen_vieja)
 
@@ -159,7 +159,7 @@ def modificar_destino(codigo):
 def eliminar_destino(codigo):
     destino = destinos.consultar_destino(codigo)
     if destino:
-        imagen_vieja = destino["Imagen_url"]
+        imagen_vieja = destino["imagen_url"]
         # Armo la ruta a la imagen
         ruta_imagen = os.path.join(RUTA_DESTINO, imagen_vieja)
 

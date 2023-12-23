@@ -18,12 +18,12 @@ const app = Vue.createApp({
             fetch(URL + 'destinos/' + this.codigo)
                 .then(response => response.json())
                 .then(data => {
-                    this.destino = data.Destino;
-                    this.inicio = data.Inicio_vigencia;
-                    this.final = data.Fin_vigencia;
-                    this.dias = data.Dias;
-                    this.imagen_url =  data.Imagen_url;
-                    this.precio = data.Precio;
+                    this.destino = data.destino;
+                    this.inicio = data.inicio_vigencia;
+                    this.final = data.fin_vigencia;
+                    this.dias = data.dias;
+                    this.imagen_url =  data.imagen_url;
+                    this.precio = data.precio;
                     this.mostrarDatospaquete = true;
                 })
                 .catch(error => console.error('Error:', error));
@@ -35,14 +35,14 @@ const app = Vue.createApp({
         },
         guardarCambios() {
             const formData = new FormData();
-            formData.append('Destino', this.destino);
-            formData.append('Inicio_vigencia', this.inicio);
-            formData.append('Fin_vigencia', this.final);
-            formData.append('Dias', this.dias);
-            formData.append('Precio', this.precio);
+            formData.append('destino', this.destino);
+            formData.append('inicio_vigencia', this.inicio);
+            formData.append('fin_vigencia', this.final);
+            formData.append('dias', this.dias);
+            formData.append('precio', this.precio);
 
             if (this.imagenSeleccionada) {
-                formData.append('Imagen_url', this.imagenSeleccionada, this.imagenSeleccionada.name);
+                formData.append('imagen_url', this.imagenSeleccionada, this.imagenSeleccionada.name);
             }
 
             fetch(URL + 'destinos/' + this.codigo, {
